@@ -13,8 +13,8 @@
   <h1>竞价平台演示</h1>
   <ul data-role="listview" data-inset="true">
       <li data-role="list-divider">点击下面的链接进入演示</li>
-      <li><a href="http://192.168.10.248:8080/ras/" target="_blank">本地测试1</a></li>
-      <li><a href="http://192.168.10.248:8080/ras/" target="_blank">产权局域网1</a></li>
+      <li><a href="http://192.168.10.248:8080/ras/" class="ui-link" rel="external" target="_blank" title="测试地址">本地测试1</a></li>
+      <li><a href="http://192.168.10.248:8080/ras/" class="ui-link" rel="external" target="_blank" title="测试地址">产权局域网1</a></li>
   </ul>
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
@@ -37,10 +37,12 @@
       // The scope of 'this' is the event. In order to call the 'receivedEvent'
       // function, we must explicity call 'app.receivedEvent(...);'
       onDeviceReady: function() {
-        navigator.app.loadUrl("http://192.168.10.248:8080/ras/");
+      //  navigator.app.loadUrl("http://192.168.10.248:8080/ras/");
       }
     };
     app.initialize();
+    var ref = window.open('http://apache.org', '_blank', 'location=yes');
+    ref.addEventListener('loadstart', function() { alert(event.url); });
   </script>
 </body>
 
