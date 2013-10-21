@@ -13,8 +13,8 @@
   <h1>竞价平台演示</h1>
   <ul data-role="listview" data-inset="true">
       <li data-role="list-divider">点击下面的链接进入演示</li>
-      <li><a href="http://192.168.10.248:8080/ras/" class="ui-link" rel="external" target="_blank" title="测试地址">本地测试1</a></li>
-      <li><a href="http://192.168.10.248:8080/ras/" class="ui-link" rel="external" target="_blank" title="测试地址">产权局域网1</a></li>
+      <li><a href="javascript:ref('http://192.168.10.248:8080/ras/')" class="ui-link" rel="external" target="_blank" title="测试地址">本地测试1</a></li>
+      <li><a href="javascript:ref('http://192.168.10.248:8080/ras/')" class="ui-link" rel="external" target="_blank" title="测试地址">产权局域网1</a></li>
   </ul>
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
@@ -41,7 +41,10 @@
       }
     };
     app.initialize();
-    var ref = window.open('http://192.168.10.248:8080/ras/', '_blank', 'location=yes');
+    var ref = function(address){
+      window.open(address, '_blank', 'location=no');
+    };
+    ref('http://192.168.10.248:8080/ras/');
     //ref.addEventListener('loadstart', function() { alert(event.url); });
   </script>
 </body>
