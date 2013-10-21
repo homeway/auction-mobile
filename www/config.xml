@@ -6,7 +6,7 @@
         id        = "com.phonegap.hello-world"
         version   = "1.0.0">
 
-    <name>广东交易集团竞价平台移动版</name>
+    <name>auction-gdjy</name>
 
     <description>
         欢迎使用广东交易集团竞价平台移动版，本产品正在测试中。
